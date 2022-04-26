@@ -1,0 +1,29 @@
+.navbar {
+  justify-content: space-between;
+  background-color: brown;
+  display: flex;
+  margin-top: 0;
+  min-width: 100%;
+  position: fixed;
+  z-index: 999  ;
+}
+.navbar-list {
+  align-items: center;
+  display: block;
+  justify-content: right;
+  margin-right: 15px;
+}
+ul {
+  text-decoration: none;
+}
+.navbar-item {
+  color: bisque;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0px 5px;
+}
+.navbar-img {
+  padding: 0px 10px;
+  height: 75px;
+  height: 75px;
+}
