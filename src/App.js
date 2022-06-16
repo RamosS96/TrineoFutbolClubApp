@@ -1,7 +1,6 @@
 import NavBar from './components/NavBar/NavBar';
 import './App.css';
 import './bootstrap-grid.min.css';
-import ItemListContainer from './components/ItemList/ItemListContainer';
 import PlayersContainer from './pages/players/PlayersContainer';
 import React from 'react';
 import { initializeApp } from "firebase/app";
@@ -23,18 +22,11 @@ function App() {
   
 
   return (
-    <div className="">
+    <div>
       <header className="">
         <NavBar ref1={"#news"} ref2={"#matches"} ref3={"#players"}/>
       </header>
-      <section className='container' id='home'>
-      </section>
-      <section className='container' id='news'>
-      
-      </section>
-      <section className='container' id='matches'>
-      </section>
-      <section className='container' id='players'>
+      <section className='container body' id='players'>
         <PlayersContainer/>        
       </section>
     </div>

@@ -1,18 +1,18 @@
 import React from 'react';
+import './PlayerCard.css';
 
 function PlayerCard({player}) {
   return (
-    <div>
-      <div>
-        <img src={player.img}/>
+    <div className='playercard col-md-3 col-sm-6'>
+      <div className='playercard-div-img'>
+        <img className='playercard-img' src={player.img}/>
       </div>
-      <div>
-        <h3>{player.name}</h3>
-        <h4>{player.number}</h4>
+      <div className='playercard-div-title'>
+        <h4>{player.name}</h4>
+        <p>{player.number}</p>
       </div>
-      <div>
-        <h5>Posisión</h5>
-        <h6>{player.position}, {player.positionalt}</h6>
+      <div className='playercard-div-info'>
+        <p>{player.position}, {player.positionalt}</p>
       </div>
     </div>
   );

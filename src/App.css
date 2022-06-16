@@ -14,19 +14,6 @@
 header {
   font-family: Changa;
 }
-#home, #news, #matches, #players {
-  height: 400px;
-  width: 900px;
-}
-#home {
-  background-color: blue;
-}
-#news {
-  background-color: red;
-}
-#matches {
-  background-color: yellow;
-}
-#players {
-  background-color: green;
+.body {
+  padding-top: 100px;
 }
