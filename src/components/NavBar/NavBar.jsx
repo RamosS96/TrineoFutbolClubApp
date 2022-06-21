@@ -4,7 +4,7 @@ import logo from '../../img/common/logoTrineo.jpg';
 
 
 
-function NavBar({ref1,ref2,ref3}) {
+function NavBar() {
   return (
     <nav className='navbar container'>
       <a href='#home'><img 
@@ -13,9 +13,9 @@ function NavBar({ref1,ref2,ref3}) {
       className='navbar-img'
       /></a>
       <ul className='navbar-list'>
-        <li className='navbar-item'><a href={ref1}>Noticias</a></li>
-        <li className='navbar-item'><a href={ref2}>Partidos</a></li>
-        <li className='navbar-item'><a href={ref3}>Plantel</a></li>
+        <li className='navbar-item'><a href='./'>Noticias</a></li>
+        <li className='navbar-item'><a href='./matches'>Partidos</a></li>
+        <li className='navbar-item'><a href='./players'>Plantel</a></li>
       </ul>
     </nav>
   );

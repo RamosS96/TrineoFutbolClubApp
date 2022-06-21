@@ -1,0 +1,11 @@
+.container-ptop {
+  padding-top: 100px;
+}
+.players-div {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+h1,h2,h3,h4 {
+  text-align: center;
+}

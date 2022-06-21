@@ -4,7 +4,7 @@ import './bootstrap-grid.min.css';
 import PlayersContainer from './pages/players/PlayersContainer';
 import React from 'react';
 import { initializeApp } from "firebase/app";
-
+import { Route, Routes } from 'react-router';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC4j7iBZ84btYBcd8ANWP0VLEHJUas2PJ4",
@@ -23,12 +23,12 @@ function App() {
 
   return (
     <div>
-      <header className="">
         <NavBar ref1={"#news"} ref2={"#matches"} ref3={"#players"}/>
-      </header>
-      <section className='container body' id='players'>
-        <PlayersContainer/>        
-      </section>
+        <Routes>
+          <Route path='/players' element={<PlayersContainer/>}/>
+        </Routes>
+               
+
     </div>
   );
 }
