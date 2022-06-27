@@ -1,12 +1,12 @@
 import React from 'react';
 import './NavBar.css';
 import logo from '../../img/common/logoTrineo.jpg';
-
+import 'animate.css';
 
 
 function NavBar() {
   return (
-    <nav className='navbar container'>
+    <nav className='navbar container animate__animated animate__jackInTheBox'>
       <a href='#home'><img 
       src={logo} 
       alt='Logo Trineo'

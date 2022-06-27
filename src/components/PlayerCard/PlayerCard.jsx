@@ -1,9 +1,11 @@
 import React from 'react';
 import './PlayerCard.css';
+import 'animate.css';
+
 
 function PlayerCard({player}) {
   return (
-    <div className='playercard col-md-3 col-sm-6'>
+    <div className='playercard col-md-3 col-sm-6 animate__animated animate__fadeInDown'>
       <div className='playercard-div-img'>
         <img className='playercard-img' src={player.img} alt=''/>
       </div>

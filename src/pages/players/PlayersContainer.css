@@ -1,5 +1,6 @@
 .container-ptop {
   padding-top: 100px;
+  z-index: 2;
 }
 .players-div {
   justify-content: center;
@@ -8,4 +9,13 @@
 }
 h1,h2,h3,h4 {
   text-align: center;
+}
+.playersBG {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.07;
+    z-index: 1;
 }
