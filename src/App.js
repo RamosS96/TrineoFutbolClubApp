@@ -5,6 +5,7 @@ import PlayersContainer from './pages/players/PlayersContainer';
 import React from 'react';
 import { initializeApp } from "firebase/app";
 import { Route, Routes } from 'react-router';
+import HomeContainer from './pages/home/HomeContainer';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC4j7iBZ84btYBcd8ANWP0VLEHJUas2PJ4",
@@ -25,6 +26,7 @@ function App() {
     <div>
         <NavBar ref1={"#news"} ref2={"#matches"} ref3={"#players"}/>
         <Routes>
+          <Route path='' element={<HomeContainer/>}/>
           <Route path='/players' element={<PlayersContainer/>}/>
         </Routes>
                
