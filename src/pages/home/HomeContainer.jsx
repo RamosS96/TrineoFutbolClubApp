@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
+import NewsBadge from '../../components/NewsBadge/NewsBadge';
 
 const getNews = () => {
   const db = getFirestore();
@@ -9,19 +10,21 @@ const getNews = () => {
   return getDocs(newsCollection);
 }
 
-function HomeContainer(props) {
+function HomeContainer() {
   const [news, setNews] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => { 
     getNews()
-      .then(snapshot => {
+      .then(snapshot => { 
         setNews(snapshot.docs.map(doc => {
-          return doc.data();
-        }))
+          console.log(doc.data())
+          return doc.data()
+        }));
+        console.log(news)
       })
   }, []);
 
-
+console.log(news);
   return (
     <div className='container'>
       <div className='row'>
@@ -32,6 +35,14 @@ function HomeContainer(props) {
         </div>
         <div className='col-sm-12 col-md-9'>
           <h1>TRINEO FUTBOL CLUB</h1>
+        </div>
+        <div className='col-md-9 justify-content-center'>
+          <div>
+            <h2>Noticias</h2>
+          </div>
+          <div>
+            {news.map(d =>  <NewsBadge props={d} />)}
+          </div>
         </div>
       </div>
     </div>
