@@ -24,9 +24,10 @@ function App() {
 
   return (
     <div>
-        <NavBar ref1={"#news"} ref2={"#matches"} ref3={"#players"}/>
+        <NavBar ref1={"#news"} ref2={"#matches"} ref3={"/players"}/>
         <Routes>
           <Route path='/' element={<HomeContainer/>}/>
+          <Route path='/news/:id' element={<HomeContainer/>}/>
           <Route path='/players' element={<PlayersContainer/>}/>
         </Routes>
                

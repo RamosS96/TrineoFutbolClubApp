@@ -6,7 +6,7 @@ import 'animate.css';
 
 function NavBar() {
   return (
-    <nav className='navbar container animate__animated animate__jackInTheBox'>
+    <nav className='navbar container animate__animated animate__fadeIn'>
       <a href='#home'><img 
       src={logo} 
       alt='Logo Trineo'

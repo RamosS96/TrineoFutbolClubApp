@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import NewsBadge from '../../components/NewsBadge/NewsBadge';
+import ResultsBar from '../../components/ResultsBar/ResultsBar';
 
 const getNews = () => {
   const db = getFirestore();
@@ -9,24 +10,39 @@ const getNews = () => {
 
   return getDocs(newsCollection);
 }
+const getResults = () => {
+  const db = getFirestore();
+  const resultsCollection = collection(db, 'results');
+
+  return getDocs(resultsCollection);
+}
 
 function HomeContainer() {
   const [news, setNews] = useState([]);
+  const [results, setResults] = useState([]);
 
-  useEffect(() => { 
+  useEffect(() => {
     getNews()
-      .then(snapshot => { 
+      .then(snapshot => {
         setNews(snapshot.docs.map(doc => {
-          console.log(doc.data())
           return doc.data()
         }));
-        console.log(news)
-      })
-  }, []);
 
-console.log(news);
+      });
+    getResults()
+      .then(snapshot => {
+        setResults(snapshot.docs.map(doc => {
+          return doc.data()
+        }));
+
+      })
+    }, []);
+      
   return (
     <div className='container'>
+      <div className='row'>
+        {results.map(d => <ResultsBar props={d} key={d.date}/>)}
+      </div>
       <div className='row'>
         <div className='col-md-3 d-sm-none'>
           <aside>
@@ -41,7 +57,7 @@ console.log(news);
             <h2>Noticias</h2>
           </div>
           <div>
-            {news.map(d =>  <NewsBadge props={d} />)}
+            {news.map(d => <NewsBadge props={d} key={d.id} />)}
           </div>
         </div>
       </div>
