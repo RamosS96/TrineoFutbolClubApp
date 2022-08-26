@@ -3,7 +3,9 @@ import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import NewsBadge from '../../components/NewsBadge/NewsBadge';
 import ResultsBar from '../../components/ResultsBar/ResultsBar';
+import './HomeContainer.css';
 
+// ------> Obtencion de datos desde firebase // GET to Firebase
 const getNews = () => {
   const db = getFirestore();
   const newsCollection = collection(db, 'news');
@@ -16,6 +18,14 @@ const getResults = () => {
 
   return getDocs(resultsCollection);
 }
+// -------> Conversor de fechas // Timestamp Conversor
+const getDateStamp = (mili) =>{
+  const miliseconds = mili * 1000;
+  const dateObj = new Date(miliseconds);
+  return dateObj.toLocaleString()
+}
+
+
 
 function HomeContainer() {
   const [news, setNews] = useState([]);
@@ -37,27 +47,27 @@ function HomeContainer() {
 
       })
     }, []);
-      
+  console.log(results)
   return (
-    <div className='container'>
+    <div className='container home-container'>
       <div className='row'>
-        {results.map(d => <ResultsBar props={d} key={d.date}/>)}
+        {results.map(d => <ResultsBar props={{...d, dateStamp : getDateStamp(d.date)}} key={d.date}/>)}
       </div>
       <div className='row'>
-        <div className='col-md-3 d-sm-none'>
+        <div className='col-sm-12 col-md-10'>
+          <h1>TRINEO FUTBOL CLUB</h1>
+        </div>
+        <div className='col-md-2 aside-menu'>
           <aside>
             <p>Aside Menu</p>
           </aside>
-        </div>
-        <div className='col-sm-12 col-md-9'>
-          <h1>TRINEO FUTBOL CLUB</h1>
         </div>
         <div className='col-md-9 justify-content-center'>
           <div>
             <h2>Noticias</h2>
           </div>
           <div>
-            {news.map(d => <NewsBadge props={d} key={d.id} />)}
+            {news.map(d => <NewsBadge props={{...d, date : getDateStamp(d.date)}} key={d.id} />)}
           </div>
         </div>
       </div>

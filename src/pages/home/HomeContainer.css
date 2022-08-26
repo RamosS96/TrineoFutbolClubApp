@@ -1,0 +1,9 @@
+.home-container {
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .aside-menu {
+    display: none;
+  }
+}

@@ -7,7 +7,7 @@ function ResultsBar({props}) {
       <div className='row'>
         <div className='col-sm-4 col-md-2'>
           <div className=''>
-            <p>{props.date}</p>
+            <p>{props.dateStamp}</p>
             <p>VS. {props.rival}</p>
             <p>{props.resulte}</p>
             <p>Estadisticas</p>

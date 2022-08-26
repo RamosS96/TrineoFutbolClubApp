@@ -1,5 +1,5 @@
 import React from 'react';
-import './NewsBadge.css';
+
 
 const NewsBadge = ({ props }) => {
   return (
