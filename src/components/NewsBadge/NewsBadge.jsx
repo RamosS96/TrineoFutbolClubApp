@@ -1,11 +1,11 @@
 import React from 'react';
-
+import './NewsBadge.css';
 
 const NewsBadge = ({ props }) => {
   return (
     <article>
       <div className="position-relative overflow-hidden">
-        <img src={props.img} alt={`${props.title}`} className="img-fluid h-100" style={{"objectFit": "cover"}} />
+        <img src={props.img} alt={`${props.title}`} className="img-top-badge" style={{"objectFit": "cover"}} />
         <div className="overlay">
           <div className="mb-1">
             <a className="text-dark" href={props.id}>{props.title}</a>

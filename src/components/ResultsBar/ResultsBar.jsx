@@ -1,20 +1,19 @@
 import React from 'react';
+import './ResultsBar.css';
 
 function ResultsBar({props}) {
-
+  const routeStats = `/news/${props.date}`;
   return (
-    <div className='container-fluid'>
-      <div className='row'>
+    
         <div className='col-sm-4 col-md-2'>
-          <div className=''>
-            <p>{props.dateStamp}</p>
-            <p>VS. {props.rival}</p>
-            <p>{props.resulte}</p>
-            <p>Estadisticas</p>
+          <div className={props.result}>
+            <p className='w-100'>{props.dateStamp}</p>
+            <p className='w-100'>VS. {props.rival}</p>
+            <p className='w-100'>{props.resulte}</p>
+            <a href={routeStats} className='text-decoration-none'>Estadisticas</a>
           </div>
         </div>
-      </div>
-    </div>
+      
   );
 }
 

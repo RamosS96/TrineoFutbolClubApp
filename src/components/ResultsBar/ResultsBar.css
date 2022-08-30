@@ -1,0 +1,20 @@
+.win , .lose, .draw {
+  color: black;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.win {
+  background-color: rgba(4, 250, 78, 0.432);
+}
+.lose {
+  background-color: rgba(228, 48, 41, 0.541);
+}
+.draw {
+  background-color: rgba(250, 213, 4, 0.479);
+}
+.win a, .lose a, .draw a {
+  text-align: center;
+}
