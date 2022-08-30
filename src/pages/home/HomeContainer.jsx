@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { collection, getDocs, getFirestore, orderBy, query } from 'firebase/firestore';
 import { useState } from 'react';
 import NewsBadge from '../../components/NewsBadge/NewsBadge';
 import ResultsBar from '../../components/ResultsBar/ResultsBar';
@@ -14,7 +14,7 @@ const getNews = () => {
 }
 const getResults = () => {
   const db = getFirestore();
-  const resultsCollection = collection(db, 'results');
+  const resultsCollection = query(collection(db, "results"), orderBy("date","desc"));
 
   return getDocs(resultsCollection);
 }
