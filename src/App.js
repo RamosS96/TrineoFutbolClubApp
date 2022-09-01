@@ -1,11 +1,13 @@
 import NavBar from './components/NavBar/NavBar';
 import './App.css';
 import './bootstrap-grid.min.css';
-import PlayersContainer from './pages/players/PlayersContainer';
 import React from 'react';
 import { initializeApp } from "firebase/app";
 import { Route, Routes } from 'react-router';
+import PlayersContainer from './pages/players/PlayersContainer';
 import HomeContainer from './pages/home/HomeContainer';
+import NewsContainer from './pages/news/NewsContainer';
+import MatchesContainer from './pages/matches/MatchesContainer';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC4j7iBZ84btYBcd8ANWP0VLEHJUas2PJ4",
@@ -24,10 +26,11 @@ function App() {
 
   return (
     <div>
-        <NavBar ref1={"#news"} ref2={"#matches"} ref3={"/players"}/>
+        <NavBar ref1={"/"} ref2={"#matches"} ref3={"/players"}/>
         <Routes>
           <Route path='/' element={<HomeContainer/>}/>
-          <Route path='/news/:id' element={<HomeContainer/>}/>
+          <Route path='/news/:id' element={<NewsContainer/>}/>
+          <Route path='/matches/:id' element={<MatchesContainer/>}/>
           <Route path='/players' element={<PlayersContainer/>}/>
         </Routes>
                
