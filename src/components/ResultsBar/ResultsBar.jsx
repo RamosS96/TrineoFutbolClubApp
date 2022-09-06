@@ -2,7 +2,7 @@ import React from 'react';
 import './ResultsBar.css';
 
 function ResultsBar({props}) {
-  const routeStats = `/news/${props.date}`;
+  const routeStats = `/matches/${props.date}`;
   return (
     
         <div className='col-sm-4 col-md-2'>
