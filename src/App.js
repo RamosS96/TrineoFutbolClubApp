@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomeContainer/>}/>
           <Route path='/news/:id' element={<NewsContainer/>}/>
-          <Route path='/matches/:id' element={<MatchesContainer/>}/>
+          <Route path='matches/:idParamMatch' element={<MatchesContainer/>}/>
           <Route path='/players' element={<PlayersContainer/>}/>
         </Routes>
                
