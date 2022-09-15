@@ -1,26 +1,29 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
-const DateContext = createContext({
-  matchDate : [],
-  newsDate : []
-})
-
-export const DateContextProvider = ({children}) => {
-  const [matchDateSelected, setMatchDateSelected] = useState([])
-  const [newsDateSelected, setNewsDateSelected] = useState([])
+const DatesContext = createContext({
+  dateList: [],
+  addProductCart: () => { }
   
+});
+
+export const DateContextProvider = ({ children }) => {
+  const [date, setDate] = useState([]);
+
+  const addDayList = (product) => {
+    setDate([product]) 
+  };
+
+
+
   return (
-    <DateContext.provider value={
-      {
-        matchDate : matchDateSelected,
-        newsDate : newsDateSelected,
-        setMatchDateSelected,
-        setNewsDateSelected
-      }
+    <DatesContext.Provider value={
+      { dateList: date,
+      addDayList,
+    }
     }>
       {children}
-      </DateContext.provider>
+    </DatesContext.Provider>
   )
-} 
+}
 
-export default DateContext;
+export default DatesContext;
