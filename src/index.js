@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
-import { DateContextProvider } from './contexts/datesContext';
+import { MatchesContextProvider } from './contexts/matchesContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DateContextProvider>
+    <MatchesContextProvider>
     <BrowserRouter>
     <App />
     </BrowserRouter>
-    </DateContextProvider>
+    </MatchesContextProvider>
   </React.StrictMode>
 );
 

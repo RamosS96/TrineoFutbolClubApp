@@ -1,32 +1,19 @@
-import React, { useState } from 'react';
-import { collection, getDocs, getFirestore, where, query} from 'firebase/firestore';
+import React, { useContext, useState } from 'react';
 import './MatchesContainer.css';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import StatsTable from '../../components/StatsTable/StatsTable';
-
+import { MatchesContext } from '../../contexts/matchesContext';
 
 function MatchesContainer() {
   const [match, setMatch] = useState([])
   const {idParamMatch} = useParams();
+  const matchCtx = useContext(MatchesContext);
   
   
-
   useEffect(()=>{
-    const getMatchs = () => {
-      const db = getFirestore();
-      const matchCollection = query(collection(db, 'matches'), where("date","==",1661115600));
+    setMatch(matchCtx.matchesList)
     
-      return getDocs(matchCollection);
-    };
-
-     getMatchs()
-     .then(snapshot => {
-      setMatch(snapshot.docs.map(doc => {
-        return doc.data()
-        
-      }))
-     });
      
     },[]);
 
