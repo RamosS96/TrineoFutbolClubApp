@@ -3,23 +3,20 @@ import './MatchesContainer.css';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import StatsTable from '../../components/StatsTable/StatsTable';
-import { MatchesContext } from '../../contexts/matchesContext';
+import { MatchContext } from '../../contexts/matchesContext';
 
 function MatchesContainer() {
   const [match, setMatch] = useState([])
   const {idParamMatch} = useParams();
-  const matchCtx = useContext(MatchesContext);
+  const matchCtx = useContext(MatchContext);
   
   
   useEffect(()=>{
     setMatch(matchCtx.matchesList)
-    
-     
+    console.log(match)
     },[]);
 
-
-    console.log(idParamMatch)
-    console.log(match)
+    
   return (
     <div className='container matches-container'>
       <div className='row'>
@@ -31,7 +28,7 @@ function MatchesContainer() {
       </div>
       <div className='row'>
        
-        {match.map(d=> <StatsTable props={d}/>)}
+        {matchCtx.matchesList.map(d => <StatsTable props={d}/>)}
       </div>
     </div>
   );
