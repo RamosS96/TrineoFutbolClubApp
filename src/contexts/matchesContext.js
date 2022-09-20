@@ -29,4 +29,4 @@ export const MatchesContextProvider = ({children}) => {
     </MatchesContext.Provider>
   )
 }
-export default MatchesContext;
+export const matchesContext =  MatchesContext;
