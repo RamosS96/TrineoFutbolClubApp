@@ -4,7 +4,6 @@ import { useState } from 'react';
 import PlayerCard from '../../components/PlayerCard/PlayerCard';
 import { useEffect } from 'react';
 import './PlayersContainer.css';
-import img from '../../img/common/playersBG.jpg';
 
 const getPlayers = () => {
   const db = getFirestore();
@@ -29,7 +28,6 @@ function PlayersContainer() {
   return (
     
     <div className='container container-ptop'>
-      <img src={img} className='playersBG' alt=''/>
       <h1>Plantel 2022</h1>
       <h3>Arqueros</h3>
       <div className='players-div'>{players.filter(p => p.zone === 'G').map(p => <PlayerCard key={p.number} player={p}/>)}</div>
