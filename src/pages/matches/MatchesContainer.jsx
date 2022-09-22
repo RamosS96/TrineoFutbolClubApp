@@ -28,7 +28,7 @@ function MatchesContainer() {
       </div>
       <div className='row'>
        
-        {matchCtx.matchesList.map(d => <StatsTable props={d}/>)}
+        {matchCtx.matchesList.filter(mat => mat.date == idParamMatch).map(d => <StatsTable props={d}/>)}
       </div>
     </div>
   );
