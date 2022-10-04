@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { collection, getDocs, getFirestore, orderBy, query } from 'firebase/firestore';
+import { collection, getDocs, getFirestore, orderBy, query,limit } from 'firebase/firestore';
 import { useState } from 'react';
 import NewsBadge from '../../components/NewsBadge/NewsBadge';
 import ResultsBar from '../../components/ResultsBar/ResultsBar';
@@ -14,7 +14,7 @@ const getNews = () => {
 }
 const getResults = () => {
   const db = getFirestore();
-  const resultsCollection = query(collection(db, "results"), orderBy("date","desc"));
+  const resultsCollection = query(collection(db, "results"), orderBy("date","desc"), limit(5));
 
   return getDocs(resultsCollection);
 }
@@ -50,8 +50,10 @@ function HomeContainer() {
   console.log(results)
   return (
     <div className='container home-container'>
-      <div className='row'>
+      <div className='row news-ba'>
+        
         {results.map(d => <ResultsBar props={{...d, dateStamp : getDateStamp(d.date)}} key={d.date}/>)}
+        
       </div>
       <div className='row'>
         <div className='col-sm-12 col-md-10'>
@@ -59,7 +61,10 @@ function HomeContainer() {
         </div>
         <div className='col-md-2 aside-menu'>
           <aside>
-            <p>Aside Menu</p>
+            {/* Sponsors */}
+            <img className="spo-logo" alt='sponsor1' src='https://logospng.org/download/riot-games/riot-games-256.png'/>
+            <img className="spo-logo" alt='sponsor2' src='https://baglietto.com.ar/wp-content/uploads/2021/03/atomo-desinflamante-01.png'/>
+            <img className="spo-logo" alt='sponsor3' src='https://cdn-icons-png.flaticon.com/512/731/731962.png'/>
           </aside>
         </div>
         <div className='col-md-9 justify-content-center'>

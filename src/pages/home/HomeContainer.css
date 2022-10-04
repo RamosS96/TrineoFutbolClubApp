@@ -1,9 +1,19 @@
 .home-container {
   padding-top: 70px;
 }
+.spo-logo {
+  width: 10rem;
+  height: 10rem;
+}
 
 @media (max-width: 768px) {
   .aside-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-bar {
     display: none;
   }
 }
