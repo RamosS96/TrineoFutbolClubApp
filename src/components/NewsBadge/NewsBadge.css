@@ -1,4 +1,4 @@
 .img-top-badge {
-  position: absolute;
-  z-index: -4;
+  width: 400px;
+  height: fit-content;
 }

@@ -10,8 +10,8 @@ function PlayerCard({player}) {
         <img className='playercard-img' src={player.img} alt=''/>
       </div>
       <div className='playercard-div-title'>
-        <h4>{player.name}</h4>
-        <p>{player.number}</p>
+        <h5><a className='a-playercard' href={`./players/${player.number}`}>{player.name}</a></h5>
+        <a className='a-playercard' href={`./players/${player.number}`}>{player.number}</a>
       </div>
       <div className='playercard-div-info'>
         <p>{player.position}, {player.positionalt}</p>
