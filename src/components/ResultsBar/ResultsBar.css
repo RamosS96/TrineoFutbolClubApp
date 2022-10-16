@@ -2,6 +2,7 @@
   color: black;
   font-weight: bold;
   justify-content: center;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

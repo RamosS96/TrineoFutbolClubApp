@@ -27,15 +27,15 @@
   padding: 10px;
 }
 
-h3, h4, h5, h6 {
+playercard h3,playercard h4,playercard h5,playercard h6 {
   display: inline-block;
   width: 100%;
   margin: 10px 0px;
 }
-h5, p, .a-playercard {
+playercard h5, playercard p, .a-playercard {
   color:beige
 }
-p, h4, h5 {
+.playercard p, playercard h4, playercard h5 {
   text-align: center;
   margin: 10px 0px;
 }

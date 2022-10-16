@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { collection, getDocs, getFirestore, orderBy, query,limit } from 'firebase/firestore';
+import React, { useState } from 'react';
+import { collection, getDocs, getFirestore} from 'firebase/firestore';
 import './MatchesContainer.css';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
