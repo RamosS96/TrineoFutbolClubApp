@@ -12,6 +12,8 @@
   display: block;
   justify-content: right;
   margin-right: 15px;
+  margin-left: 0px;
+  padding: 0px;
 }
 ul {
   text-decoration: none;
@@ -30,4 +32,7 @@ ul {
   padding: 0px 10px;
   height: 75px;
   height: 75px;
+}
+navbar a {
+  margin: 0
 }

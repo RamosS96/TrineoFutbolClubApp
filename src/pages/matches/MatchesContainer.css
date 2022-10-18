@@ -1,6 +1,15 @@
 .matches-container {
-    padding-top: 75px;
+    padding-top: 90px;
 }
 .matches-container .row {
+    justify-content: center;
+}
+.matchescontainer-img {
+    margin-top: 20px;
+    max-width: 414px;
+    display: block;
+}
+.matchescontainer-img-c {
+    display: flex;
     justify-content: center;
 }

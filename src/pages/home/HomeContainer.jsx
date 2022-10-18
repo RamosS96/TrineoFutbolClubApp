@@ -50,7 +50,7 @@ function HomeContainer() {
   console.log(results)
   return (
     <div className='container home-container'>
-      <div className='row news-ba'>
+      <div className='row news-bar'>
         <div className='col-md-10 offset-md-1 d-flex flex-row justify-content-between'>
         {results.map(d => <ResultsBar props={{...d, dateStamp : getDateStamp(d.date)}} key={d.date}/>)}
         </div>
@@ -59,7 +59,7 @@ function HomeContainer() {
         <div className='col-sm-12 offset-md-1 d-flex flex-row justify-content-center col-md-10'>
           <h1>TRINEO FUTBOL CLUB</h1>
         </div>
-        <div className='col-md-12 d-flex flex-row justify-content-center aside-menu'>
+        <div className='col-md-12 col-sm-12 d-flex flex-row justify-content-center aside-menu'>
           
             {/* Sponsors */}
             <img className="spo-logo d-inline" alt='sponsor1' src='https://logospng.org/download/riot-games/riot-games-256.png'/>

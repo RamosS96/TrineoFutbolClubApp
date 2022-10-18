@@ -1,0 +1,38 @@
+.statstable {
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+tr {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+thead {
+    justify-content: center;
+}
+td {
+    display: block;
+    width: 110px;
+    font-style: italic;
+    color: bisque;
+}
+table, tr {
+    border: 1px solid rgb(0, 0, 0);
+}
+.statstable-rtitle {
+    font-weight: bolder;
+}
+thead tr {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: bisque;
+}

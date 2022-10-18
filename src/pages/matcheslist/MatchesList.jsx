@@ -23,7 +23,7 @@ function MatchesList() {
         },[]);
 
     return (
-        <div className='matcheslist-container'>
+        <div className='matcheslist-container container'>
             <h2>TODOS LOS PARTIDOS</h2>
             {match.map(d => <a href={`./matches/${d.date}`}><span>{d.rival} </span><span>({d.GF + " -" + d.GC})</span></a>)}
         </div>
