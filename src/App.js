@@ -1,4 +1,4 @@
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar';
 import './App.css';
 import './bootstrap-grid.min.css';
 import React from 'react';
