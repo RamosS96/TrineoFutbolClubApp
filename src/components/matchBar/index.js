@@ -1,12 +1,12 @@
 import React from 'react';
 import { Bar, Linkmatch } from './styled';
 
-function MatchBar({ props }) {
+function MatchBar({ props, link }) {
     return (
         
             <Bar>
                 
-                    <Linkmatch>{props}</Linkmatch>
+                    <Linkmatch as="a" href={`/matches/${link}`} >{props}</Linkmatch>
                 
             </Bar>
         

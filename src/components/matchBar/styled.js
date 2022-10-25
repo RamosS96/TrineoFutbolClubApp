@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../colors";
+import {colors} from "../../utils/colors";
 
 
 export const Bar = styled.div`

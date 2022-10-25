@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../colors";
+import {colors} from "../../utils/colors";
 
 export const Nav = styled.nav`
   justify-content: space-between;
@@ -33,6 +33,10 @@ export const NavbarListA = styled.a`
   font-size: 1.5em;
   text-decoration: none;
   color: ${colors.white};
+  &:hover{
+    text-decoration: none;
+    color: ${colors.lbrown}
+  }
 `
 export const NavbarUl = styled.a`
   align-items: center;
