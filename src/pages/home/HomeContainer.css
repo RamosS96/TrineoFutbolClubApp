@@ -1,10 +1,7 @@
 .home-container {
   padding-top: 90px;
 }
-.spo-logo {
-  width: 8rem;
-  height: 8rem;
-}
+
 
 @media (max-width: 768px) {
   .aside-menu {

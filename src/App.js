@@ -1,5 +1,6 @@
 import NavBar from './components/NavBar';
 import './App.css';
+import './utils/fonts/fonts.css';
 import './bootstrap-grid.min.css';
 import React from 'react';
 import { initializeApp } from "firebase/app";

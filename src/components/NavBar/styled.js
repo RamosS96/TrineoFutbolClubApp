@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   z-index: 999  ;
   align-items: center;
   padding: 2px 0px;
+  width: 100%
 `
 export const NavbarA = styled.a`
   margin: 0px;
@@ -30,7 +31,7 @@ export const NavbarLi = styled.li`
 `
 
 export const NavbarListA = styled.a`
-  font-size: 1.5em;
+  font-size: 1.2rem;
   text-decoration: none;
   color: ${colors.white};
   &:hover{
@@ -45,5 +46,6 @@ export const NavbarUl = styled.a`
   margin-right: 5px;
   margin-left: 0px;
   padding: 0px;
-  text-decoration: none
+  text-decoration: none;
+  width: fit-content;
 `

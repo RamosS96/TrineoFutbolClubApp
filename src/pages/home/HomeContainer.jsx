@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { collection, getDocs, getFirestore, orderBy, query,limit } from 'firebase/firestore';
 import { useState } from 'react';
-import NewsBadge from '../../components/NewsBadge/NewsBadge';
 import ResultsBar from '../../components/ResultsBar/ResultsBar';
 import './HomeContainer.css';
-
+import NewsMain from '../../components/NewsMain';
+import SponsorL from '../../components/Sponsor';
 // ------> Obtencion de datos desde firebase // GET to Firebase
 const getNews = () => {
   const db = getFirestore();
@@ -25,7 +25,14 @@ const getDateStamp = (mili) =>{
   return dateObj.toLocaleString()
 }
 
-
+const getResume = (cont) => {
+  if (cont.length > 85) {
+    console.log(cont.length)
+    const newCont = cont.splice(0, 80)
+    newCont.push("(...)")
+    return newCont
+  }
+} 
 
 function HomeContainer() {
   const [news, setNews] = useState([]);
@@ -47,7 +54,6 @@ function HomeContainer() {
 
       })
     }, []);
-  console.log(results)
   return (
     <div className='container home-container'>
       <div className='row news-bar'>
@@ -62,9 +68,9 @@ function HomeContainer() {
         <div className='col-md-12 col-sm-12 d-flex flex-row justify-content-center aside-menu'>
           
             {/* Sponsors */}
-            <img className="spo-logo d-inline" alt='sponsor1' src='https://logospng.org/download/riot-games/riot-games-256.png'/>
-            <img className="spo-logo d-inline" alt='sponsor2' src='https://baglietto.com.ar/wp-content/uploads/2021/03/atomo-desinflamante-01.png'/>
-            <img className="spo-logo d-inline" alt='sponsor3' src='https://cdn-icons-png.flaticon.com/512/731/731962.png'/>
+            <SponsorL alt='sponsor1' link="https://logospng.org/download/riot-games/riot-games-256.png"/>
+            <SponsorL alt='sponsor2' link='https://baglietto.com.ar/wp-content/uploads/2021/03/atomo-desinflamante-01.png'/>
+            <SponsorL alt='sponsor3' link='https://cdn-icons-png.flaticon.com/512/731/731962.png'/>
           
         </div>
         <div className='col-md-9 justify-content-center'>
@@ -72,7 +78,7 @@ function HomeContainer() {
             <h2>Noticias</h2>
           </div>
           <div>
-            {news.map(d => <NewsBadge props={{...d, date : getDateStamp(d.date)}} key={d.id} />)}
+            {news.map(d => <NewsMain title='Noticias' props={{...d,content: getResume([...d.content]), datestamp : getDateStamp(d.date)}} key={d.id} />)}
             
           </div>
         </div>

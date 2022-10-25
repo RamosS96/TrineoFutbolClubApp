@@ -9,7 +9,11 @@
 header {
   font-family: Changa;
 }
-.body {
-  padding-top: 100px;
+body {
+  font-family: Josefina;
   scroll-behavior: smooth
+}
+
+h1 {
+  font-family: SpecialElite;
 }

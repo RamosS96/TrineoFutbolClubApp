@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Changa;
+  src: url('./ChangaOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: Josefina;
+  src: url('./JosefinSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: SpecialElite;
+  src: url('./SpecialElite-Regular.ttf');
+}
+
+@font-face {
+  font-family: JosefinaItalic;
+  src: url('/src/utils/fonts/JosefinSans-Italic-VariableFont_wght.ttf');
+}

@@ -12,7 +12,7 @@ function NavBar() {
       alt='Logo Trineo'
       /></NavbarA>
       <NavbarUl>
-        <NavbarLi><NavbarListA href='/'>Noticias</NavbarListA></NavbarLi>
+        <NavbarLi><NavbarListA href='/notices'>Noticias</NavbarListA></NavbarLi>
         <NavbarLi><NavbarListA href='/matches'>Partidos</NavbarListA></NavbarLi>
         <NavbarLi><NavbarListA href='/players'>Plantel</NavbarListA></NavbarLi>
       </NavbarUl>

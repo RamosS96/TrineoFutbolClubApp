@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './MatchesList.css';
 import { collection, getDocs, getFirestore,query,orderBy} from 'firebase/firestore';
-import MatchBar from '../../components/matchBar';
+import MatchBar from '../../components/MatchBar';
 import { Wrapper } from '../../components/Wrapper/styled';
 
 function getMatches(){
