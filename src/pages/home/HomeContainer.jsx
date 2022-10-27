@@ -5,10 +5,12 @@ import ResultsBar from '../../components/ResultsBar/ResultsBar';
 import './HomeContainer.css';
 import NewsMain from '../../components/NewsMain';
 import SponsorL from '../../components/Sponsor';
+import NewsCard from '../../components/NewsCard';
+
 // ------> Obtencion de datos desde firebase // GET to Firebase
 const getNews = () => {
   const db = getFirestore();
-  const newsCollection = collection(db, 'news');
+  const newsCollection = query(collection(db, "news"), orderBy("date","asc"), limit(5));
 
   return getDocs(newsCollection);
 }
@@ -27,10 +29,11 @@ const getDateStamp = (mili) =>{
 
 const getResume = (cont) => {
   if (cont.length > 85) {
-    console.log(cont.length)
     const newCont = cont.splice(0, 80)
     newCont.push("(...)")
     return newCont
+  } else {
+    return cont
   }
 } 
 
@@ -78,8 +81,11 @@ function HomeContainer() {
             <h2>Noticias</h2>
           </div>
           <div>
-            {news.map(d => <NewsMain title='Noticias' props={{...d,content: getResume([...d.content]), datestamp : getDateStamp(d.date)}} key={d.id} />)}
+            {news.slice(0,1).map(d => <NewsMain props={{...d,content: getResume([...d.content]), datestamp : getDateStamp(d.date)}} key={d.date} />)}
             
+          </div>
+          <div>
+            {news.slice(1,4).map(d => <NewsCard props={{...d, content: getResume([...d.content]), datestamp : getDateStamp(d.date)}} key={d.date}/>)}
           </div>
         </div>
       </div>

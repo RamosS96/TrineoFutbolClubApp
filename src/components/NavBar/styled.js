@@ -21,7 +21,7 @@ export const NavbarA = styled.a`
 export const NavbarImg = styled.img`
   padding: 0px 3px;
   height: 75px;
-  height: 75px;
+  width: 75px;
 `
 
 export const NavbarLi = styled.li`
@@ -43,7 +43,7 @@ export const NavbarUl = styled.a`
   align-items: center;
   display: block;
   justify-content: right;
-  margin-right: 5px;
+  margin-right: 0px;
   margin-left: 0px;
   padding: 0px;
   text-decoration: none;

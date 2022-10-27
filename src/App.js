@@ -7,7 +7,7 @@ import { initializeApp } from "firebase/app";
 import { Route, Routes } from 'react-router';
 import PlayersContainer from './pages/players/PlayersContainer';
 import HomeContainer from './pages/home/HomeContainer';
-import NewsContainer from './pages/news/NewsContainer';
+import NewsContainer from './pages/news';
 import MatchesContainer from './pages/matches/MatchesContainer';
 import PlayerStats from './pages/playerstats/PlayerStats';
 import MatchesList from './pages/matcheslist/MatchesList';
@@ -32,7 +32,7 @@ function App() {
         <NavBar ref1={"/"} ref2={"#matches"} ref3={"/players"}/>
         <Routes>
           <Route path='/' element={<HomeContainer/>}/>
-          <Route path='/news/:id' element={<NewsContainer/>}/>
+          <Route path='/news' element={<NewsContainer/>}/>
           <Route path='/matches/:idParamMatch' element={<MatchesContainer/>}/>
           <Route path='/players' element={<PlayersContainer/>}/>
           <Route path='/players/:idParamPlayer' element={<PlayerStats/>}/>
