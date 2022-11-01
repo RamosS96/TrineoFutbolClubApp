@@ -1,42 +1,14 @@
 import React, { useEffect } from 'react';
-import { collection, getDocs, getFirestore, orderBy, query, limit } from 'firebase/firestore';
 import { useState } from 'react';
 import ResultsBar from '../../components/ResultsBar';
 import NewsMain from '../../components/NewsMain';
 import SponsorL from '../../components/Sponsor';
 import NewsCard from '../../components/NewsCard';
-import { Wrapper } from '../../components/Wrapper/styled';
+import { Wrapper, WrapperLG } from '../../components/Wrapper/styled';
 import { Title1, Title2 } from '../../components/Title/';
 import { Container } from '../../components/Container';
-// ------> Obtencion de datos desde firebase // GET to Firebase
-const getNews = () => {
-  const db = getFirestore();
-  const newsCollection = query(collection(db, "news"), orderBy("date", "desc"), limit(5));
+import { getNews, getResults, getDateStamp, getResume } from '../../utils/fn';
 
-  return getDocs(newsCollection);
-}
-const getResults = () => {
-  const db = getFirestore();
-  const resultsCollection = query(collection(db, "results"), orderBy("date", "desc"), limit(5));
-
-  return getDocs(resultsCollection);
-}
-// -------> Conversor de fechas // Timestamp Conversor
-const getDateStamp = (mili) => {
-  const miliseconds = mili * 1000;
-  const dateObj = new Date(miliseconds);
-  return dateObj.toLocaleString()
-}
-
-const getResume = (cont) => {
-  if (cont.length > 85) {
-    const newCont = cont.splice(0, 80)
-    newCont.push("(...)")
-    return newCont
-  } else {
-    return cont
-  }
-}
 
 function HomeContainer() {
   const [news, setNews] = useState([]);
@@ -60,7 +32,9 @@ function HomeContainer() {
   }, []);
   return (
     <Container>
+        <WrapperLG>
           {results.map(d => <ResultsBar props={{ ...d, dateStamp: getDateStamp(d.date) }} key={d.date} />)}
+          </WrapperLG>
       <Title1>TRINEO FUTBOL CLUB</Title1>
       <Wrapper>
         {/* Sponsors */}

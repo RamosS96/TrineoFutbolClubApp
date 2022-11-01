@@ -1,16 +1,10 @@
 import React from 'react';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import PlayerCard from '../../components/PlayerCard/PlayerCard';
 import { useEffect } from 'react';
 import './PlayersContainer.css';
+import { getPlayers } from '../../utils/fn';
 
-const getPlayers = () => {
-  const db = getFirestore();
-  const playersCollection = collection(db, 'players');
-
-  return getDocs(playersCollection);
-}
 
 
 function PlayersContainer() {

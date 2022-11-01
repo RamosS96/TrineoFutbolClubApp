@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import './MatchesContainer.css';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import StatsTable from '../../components/StatsTable/StatsTable'
-
-function getMatches() {
-  const db = getFirestore()
-  const matchesCollection = collection(db, 'matches');
-
-  return getDocs(matchesCollection)
-}
+import StatsTable from '../../components/StatsTable/StatsTable';
+import { getMatches } from '../../utils/fn';
 
 function MatchesContainer() {
   const [match, setMatch] = useState([])

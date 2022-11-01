@@ -1,15 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './MatchesList.css';
-import { collection, getDocs, getFirestore,query,orderBy} from 'firebase/firestore';
 import MatchBar from '../../components/MatchBar';
 import { Wrapper } from '../../components/Wrapper/styled';
+import {getMatches} from '../../utils/fn';
 
-function getMatches(){
-    const db = getFirestore()
-    const matchesCollection = query(collection(db, "matches"), orderBy("date","desc"));
-  
-    return getDocs(matchesCollection)
-  }
+
 
 function MatchesList() {
     const [match, setMatch] = useState([]);
@@ -28,7 +23,7 @@ function MatchesList() {
         <div className='matcheslist-container container'>
             <h2>TODOS LOS PARTIDOS</h2>
             <Wrapper>
-            {match.map(d => <MatchBar link={d.date} props={`${d.rival} - ${d.GF} - ${d.GC}`}></MatchBar>)}            
+            {match.map(d => <MatchBar key={d.date} link={d.date} props={`${d.rival} - ${d.GF} - ${d.GC}`}></MatchBar>)}            
             </Wrapper>
         </div>
     );

@@ -4,9 +4,8 @@ import { colors } from "../../utils/colors";
 export const ResultContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   height: 125px;
-  margin-bottom: 50px;
   background-color: ${props => props.bg };
   @media (max-width: 605px){
     display:none

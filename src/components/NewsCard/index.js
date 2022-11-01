@@ -2,7 +2,7 @@ import React from 'react';
 import { Title, Card, Content, Img, Text, Date } from './styled';
 function NewsCard({props}) {
   return (
-    <Card>
+    <Card as="a" href={`/news/${props.date}`}>
       <Img src={props.img}/>
       <Content>
         <Title>{props.title}</Title>
