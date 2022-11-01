@@ -9,6 +9,7 @@ export const Card = styled.div`
   background-color: ${colors.white};
   max-width: 360px;
   padding: 10px;
+  margin: 10px 0px;
   align-items: center;
 `
 

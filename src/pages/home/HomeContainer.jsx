@@ -10,7 +10,7 @@ import NewsCard from '../../components/NewsCard';
 // ------> Obtencion de datos desde firebase // GET to Firebase
 const getNews = () => {
   const db = getFirestore();
-  const newsCollection = query(collection(db, "news"), orderBy("date","asc"), limit(5));
+  const newsCollection = query(collection(db, "news"), orderBy("date","desc"), limit(5));
 
   return getDocs(newsCollection);
 }
@@ -76,18 +76,13 @@ function HomeContainer() {
             <SponsorL alt='sponsor3' link='https://cdn-icons-png.flaticon.com/512/731/731962.png'/>
           
         </div>
-        <div className='col-md-9 justify-content-center'>
-          <div>
+
             <h2>Noticias</h2>
-          </div>
-          <div>
+
             {news.slice(0,1).map(d => <NewsMain props={{...d,content: getResume([...d.content]), datestamp : getDateStamp(d.date)}} key={d.date} />)}
-            
-          </div>
-          <div>
+
             {news.slice(1,4).map(d => <NewsCard props={{...d, content: getResume([...d.content]), datestamp : getDateStamp(d.date)}} key={d.date}/>)}
-          </div>
-        </div>
+
       </div>
     </div>
   );

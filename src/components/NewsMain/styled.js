@@ -11,10 +11,13 @@ export const NewsMainTitle = styled.h3`
 export const NewsMainWrapper = styled.section`
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
+  text-align:center;
   flex-wrap: wrap;
   background-color: ${colors.white};
-  width: 95%
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 `;
 
 export const NewsMainImg = styled.img`
