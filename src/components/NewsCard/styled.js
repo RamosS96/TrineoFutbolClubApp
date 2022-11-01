@@ -11,6 +11,7 @@ export const Card = styled.div`
   padding: 10px;
   margin: 10px 0px;
   align-items: center;
+  width: 100%;
 `
 
 export const Content = styled.div`

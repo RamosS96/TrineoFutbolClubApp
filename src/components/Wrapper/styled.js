@@ -7,5 +7,7 @@ export const Wrapper = styled.section`
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px;
-    background-color: ${colors.white}
+    background-color: ${colors.white};
+    width: 100%;
+    margin: 10px 0px;
     `;
