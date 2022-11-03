@@ -39,7 +39,7 @@ export const NavbarListA = styled.a`
     color: ${colors.lbrown}
   }
 `
-export const NavbarUl = styled.a`
+export const NavbarUl = styled.ul`
   align-items: center;
   display: block;
   justify-content: right;

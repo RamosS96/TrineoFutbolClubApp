@@ -7,7 +7,7 @@ function NewsMain({props}) {
       <NewsMainTitle>{props.title}</NewsMainTitle>
       <NewsMainImg src={props.img}/>
       <NewsMainInfo>{props.datestamp}</NewsMainInfo>
-      <NewsMainContent as="a" href={`/matches/${props.date}`}>{props.content}</NewsMainContent>
+      <NewsMainContent as="a" href={`/news/${props.date}`}>{props.content}</NewsMainContent>
     </NewsMainWrapper>
   );
 }

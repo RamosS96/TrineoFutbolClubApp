@@ -11,6 +11,7 @@ import NewsContainer from './pages/news';
 import MatchesContainer from './pages/matches/MatchesContainer';
 import PlayerStats from './pages/playerstats/PlayerStats';
 import MatchesList from './pages/matcheslist/MatchesList';
+import NewsExpanded from './pages/NewsExpanded';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC4j7iBZ84btYBcd8ANWP0VLEHJUas2PJ4",
@@ -33,7 +34,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomeContainer/>}/>
           <Route path='/news' element={<NewsContainer/>}/>
-          <Route path='/news/:idParamNew' element={<NewsContainer/>}/>
+          <Route path='/news/:idParamNew' element={<NewsExpanded/>}/>
           <Route path='/matches/:idParamMatch' element={<MatchesContainer/>}/>
           <Route path='/players' element={<PlayersContainer/>}/>
           <Route path='/players/:idParamPlayer' element={<PlayerStats/>}/>

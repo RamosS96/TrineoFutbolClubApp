@@ -41,5 +41,11 @@ export const NewsMainContent = styled.p`
   font-family: JosefinaItalic;
   font-size: 1rem;
   font-weight: 300;
-  width:100%
+  width:100%;
+  text-decoration: none;
+  color: ${colors.black};
+  &:hover {
+    color: ${colors.black};
+    text-decoration: none;
+  }
 `

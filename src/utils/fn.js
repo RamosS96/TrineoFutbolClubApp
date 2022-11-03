@@ -40,6 +40,11 @@ export const getMatches = () => {
 export const getPlayers = () => {
   const db = getFirestore();
   const playersCollection = collection(db, 'players');
-
   return getDocs(playersCollection);
+}
+
+export const getNewsComplete = () => {
+  const db = getFirestore();
+  const newsCollection = collection(db, "news");
+  return getDocs(newsCollection)
 }
