@@ -33,6 +33,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomeContainer/>}/>
           <Route path='/news' element={<NewsContainer/>}/>
+          <Route path='/news/:idParamNew' element={<NewsContainer/>}/>
           <Route path='/matches/:idParamMatch' element={<MatchesContainer/>}/>
           <Route path='/players' element={<PlayersContainer/>}/>
           <Route path='/players/:idParamPlayer' element={<PlayerStats/>}/>
