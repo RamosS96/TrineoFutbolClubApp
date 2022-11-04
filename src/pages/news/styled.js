@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 85px;
+  padding: 10px;
 `
 export const MainTitle = styled.h1`
   font-family: Josefina;

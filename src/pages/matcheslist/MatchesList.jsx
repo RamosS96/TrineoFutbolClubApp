@@ -3,7 +3,7 @@ import './MatchesList.css';
 import MatchBar from '../../components/MatchBar';
 import { Wrapper } from '../../components/Wrapper/styled';
 import {getMatches} from '../../utils/fn';
-
+import { Container } from '../../components/Container';
 
 
 function MatchesList() {
@@ -20,12 +20,12 @@ function MatchesList() {
         },[]);
 
     return (
-        <div className='matcheslist-container container'>
+        <Container>
             <h2>TODOS LOS PARTIDOS</h2>
             <Wrapper>
             {match.map(d => <MatchBar key={d.date} link={d.date} props={`${d.rival} - ${d.GF} - ${d.GC}`}></MatchBar>)}            
             </Wrapper>
-        </div>
+        </Container>
     );
 }
 

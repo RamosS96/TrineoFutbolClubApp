@@ -5,7 +5,7 @@ import './bootstrap-grid.min.css';
 import React from 'react';
 import { initializeApp } from "firebase/app";
 import { Route, Routes } from 'react-router';
-import PlayersContainer from './pages/players/PlayersContainer';
+import PlayersContainer from './pages/players/';
 import HomeContainer from './pages/home/HomeContainer';
 import NewsContainer from './pages/news';
 import MatchesContainer from './pages/matches/MatchesContainer';

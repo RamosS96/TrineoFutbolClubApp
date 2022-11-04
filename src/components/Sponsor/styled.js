@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SponsorLogo = styled.img`
-  width: 100px;
-  height: 100px;
+  width: auto;
+  height: 80px;
   display: inline
 `

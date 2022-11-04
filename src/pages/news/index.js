@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Wrapper, Title, MainTitle } from './styled';
+import { Title, MainTitle } from './styled';
 import {getNews, getResume} from '../../utils/fn';
 import { Container } from '../../components/Container';
 import NewsCard from '../../components/NewsCard';

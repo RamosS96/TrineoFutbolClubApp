@@ -38,9 +38,9 @@ function HomeContainer() {
       <Title1>TRINEO FUTBOL CLUB</Title1>
       <Wrapper>
         {/* Sponsors */}
-        <SponsorL alt='sponsor1' link="https://logospng.org/download/riot-games/riot-games-256.png" />
-        <SponsorL alt='sponsor2' link='https://baglietto.com.ar/wp-content/uploads/2021/03/atomo-desinflamante-01.png' />
-        <SponsorL alt='sponsor3' link='https://cdn-icons-png.flaticon.com/512/731/731962.png' />
+        <SponsorL alt='sponsor1' link="https://firebasestorage.googleapis.com/v0/b/trineo-app.appspot.com/o/sponsorsLogo%2FRiot_Games-Logo.wine.png?alt=media&token=f30ab246-4ed9-4349-9917-5368cb61874d" />
+        <SponsorL alt='sponsor2' link='https://firebasestorage.googleapis.com/v0/b/trineo-app.appspot.com/o/sponsorsLogo%2FLogo_Bayer.svg.png?alt=media&token=d08e8d96-a07c-4466-ae67-9ff66bd399da' />
+        <SponsorL alt='sponsor3' link='https://firebasestorage.googleapis.com/v0/b/trineo-app.appspot.com/o/sponsorsLogo%2FLogo_Adidas.png?alt=media&token=08f848a3-90c1-4510-afd9-40d4e6dd286f' />
       </Wrapper>
       <Title2>Noticias</Title2>
       <Wrapper>

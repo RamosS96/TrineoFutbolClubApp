@@ -7,7 +7,7 @@ export const ResultContainer = styled.div`
   justify-content: space-around;
   height: 125px;
   background-color: ${props => props.bg };
-  @media (max-width: 605px){
+  @media (max-width: 615px){
     display:none
   }
 `;

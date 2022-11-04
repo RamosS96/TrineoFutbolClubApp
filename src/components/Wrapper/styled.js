@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     padding: 10px;
     background-color: ${colors.white};

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import StatsTable from '../../components/StatsTable/StatsTable';
 import { getMatches } from '../../utils/fn';
+import { Container } from '../../components/Container';
 
 function MatchesContainer() {
   const [match, setMatch] = useState([])
@@ -23,7 +24,7 @@ function MatchesContainer() {
 
 
   return (
-    <div className='container matches-container'>
+    <Container>
       <div className='row'>
         <div className='col-md-6 col-sm-12'>
           <h3>Partido contra {match.filter(mat => mat.date == idParamMatch).map(d => <p>{d.rival}</p>)}</h3>
@@ -39,7 +40,7 @@ function MatchesContainer() {
         {match.filter(mat => mat.date == idParamMatch).map(d => <img className='matchescontainer-img' alt="" src={d.img} />)}
       </div>
 
-    </div>
+    </Container>
   );
 }
 

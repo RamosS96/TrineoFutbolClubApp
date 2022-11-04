@@ -1,4 +1,7 @@
 import { collection, getDocs, getFirestore, orderBy, query, limit } from 'firebase/firestore';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/src/sweetalert2.scss';
+import { colors } from './colors';
 
 export const getNews = () => {
   const db = getFirestore();
@@ -32,7 +35,7 @@ export const getResume = (cont) => {
 
 export const getMatches = () => {
   const db = getFirestore()
-  const matchesCollection = query(collection(db, "matches"), orderBy("date","desc"));
+  const matchesCollection = query(collection(db, "matches"), orderBy("date", "desc"));
 
   return getDocs(matchesCollection)
 }
@@ -47,4 +50,24 @@ export const getNewsComplete = () => {
   const db = getFirestore();
   const newsCollection = collection(db, "news");
   return getDocs(newsCollection)
+}
+
+export const swalFire = (props) => {
+  Swal.fire({
+    title: `${props.name}`,
+    html: `
+          <p>Partidos: ${props.matches}</p>
+          <p>Goles: ${props.goals}</p>
+          <p>Incorporación: ${props.inc}</p>
+          `,
+    confirmButtonText: `Ver estadisticas completas`,
+    color: `${colors.hbrown}`,
+    background: `${colors.white}`,
+    confirmButtonColor: `${colors.lbrown}`
+  })
+    .then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = `/players/${props.number}`
+      }
+    })
 }
