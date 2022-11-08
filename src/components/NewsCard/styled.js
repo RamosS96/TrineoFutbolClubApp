@@ -12,6 +12,7 @@ export const Card = styled.div`
   margin: 10px 0px;
   align-items: center;
   width: 100%;
+  text-decoration: none;
   color: ${colors.black};
   &:hover {
     text-decoration: none;

@@ -12,7 +12,7 @@ export const getNews = () => {
 
 export const getResults = () => {
   const db = getFirestore();
-  const resultsCollection = query(collection(db, "results"), orderBy("date", "desc"), limit(4));
+  const resultsCollection = query(collection(db, "results"), orderBy("date", "desc"), limit(5));
 
   return getDocs(resultsCollection);
 }
