@@ -34,6 +34,7 @@ export const TitlePlayer = styled.h5`
   font-family: Josefina;
   font-size: bolder;
   width: 100%;
+  text-decoration: none;
   text-align: center;
   &:hover {
     text-decoration: none;
@@ -43,8 +44,8 @@ export const TitlePlayer = styled.h5`
 
 export const DetailsPlayer = styled.span`
   color: ${colors.white};
-  font-weight: bolder;
   text-align: center;
+  text-decoration: none;
   padding: 5px 0px;
   &:hover{
     text-decoration: none;

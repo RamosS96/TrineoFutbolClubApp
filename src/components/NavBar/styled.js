@@ -11,7 +11,7 @@ export const Nav = styled.nav`
   z-index: 999  ;
   align-items: center;
   padding: 2px 0px;
-  width: 100%
+  max-width: 100%;
 `
 export const NavbarA = styled.a`
   margin: 0px;
@@ -27,7 +27,7 @@ export const NavbarImg = styled.img`
 export const NavbarLi = styled.li`
   display: inline-block;
   text-decoration: none;
-  margin: 0px 5px;
+  padding: 0px 5px;
 `
 
 export const NavbarListA = styled.a`

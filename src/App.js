@@ -8,9 +8,9 @@ import { Route, Routes } from 'react-router';
 import PlayersContainer from './pages/players/';
 import HomeContainer from './pages/home/HomeContainer';
 import NewsContainer from './pages/news';
-import MatchesContainer from './pages/matches/MatchesContainer';
-import PlayerStats from './pages/playerstats/PlayerStats';
-import MatchesList from './pages/matcheslist/MatchesList';
+import MatchesContainer from './pages/matches';
+import PlayerStats from './pages/playerstats';
+import MatchesList from './pages/matcheslist';
 import NewsExpanded from './pages/NewsExpanded';
 
 const firebaseConfig = {

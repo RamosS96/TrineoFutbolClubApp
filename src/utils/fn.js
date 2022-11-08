@@ -63,7 +63,8 @@ export const swalFire = (props) => {
     confirmButtonText: `Ver estadisticas completas`,
     color: `${colors.hbrown}`,
     background: `${colors.white}`,
-    confirmButtonColor: `${colors.lbrown}`
+    confirmButtonColor: `${colors.lbrown}`,
+    backdrop: 'rgba(0,0,0, 0.8)'
   })
     .then((result) => {
       if (result.isConfirmed) {

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './MatchesContainer.css';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import StatsTable from '../../components/StatsTable/StatsTable';
 import { getMatches } from '../../utils/fn';
 import { Container } from '../../components/Container';
+import { ImgMatch } from './styled'
 
 function MatchesContainer() {
   const [match, setMatch] = useState([])
@@ -25,20 +25,18 @@ function MatchesContainer() {
 
   return (
     <Container>
-      <div className='row'>
-        <div className='col-md-6 col-sm-12'>
-          <h3>Partido contra {match.filter(mat => mat.date == idParamMatch).map(d => <p>{d.rival}</p>)}</h3>
-        </div>
-      </div>
 
-      <div className='col-md-6 col-sm-12'>
+        <h3>Partido contra {match.filter(mat => mat.date == idParamMatch).map(d => <p>{d.rival}</p>)}</h3>
+    
+
+
         {match.filter(mat => mat.date == idParamMatch).map(d => <StatsTable props={d} />)}
 
-      </div>
 
-      <div className='col-md-6 col-sm-12 matchescontainer-img-c'>
-        {match.filter(mat => mat.date == idParamMatch).map(d => <img className='matchescontainer-img' alt="" src={d.img} />)}
-      </div>
+
+  
+        {match.filter(mat => mat.date == idParamMatch).map(d => <ImgMatch src={d.img} />)}
+
 
     </Container>
   );
