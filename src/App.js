@@ -1,4 +1,6 @@
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 import './utils/fonts/fonts.css';
 import './bootstrap-grid.min.css';
@@ -40,7 +42,7 @@ function App() {
           <Route path='/players/:idParamPlayer' element={<PlayerStats/>}/>
           <Route path='/matches' element={<MatchesList/>}/>
         </Routes>
-               
+               <Footer/>
 
     </div>
   );

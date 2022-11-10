@@ -42,7 +42,9 @@ function HomeContainer() {
       </Wrapper>
       <Title2>Noticias</Title2>
       <Wrapper>
+        <Wrapper>
       {news.slice(0, 1).map(d => <NewsMain props={{ ...d, content: getResume([...d.content]), datestamp: getDateStamp(d.date) }} key={d.date} />)}
+      </Wrapper>
       {news.slice(1, 4).map(d => <NewsCard props={{ ...d, content: getResume([...d.content]), datestamp: getDateStamp(d.date) }} key={d.date} />)}
       </Wrapper>
     </Container>
