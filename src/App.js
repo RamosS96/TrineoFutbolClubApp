@@ -3,7 +3,6 @@ import Footer from './components/Footer';
 import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 import './utils/fonts/fonts.css';
-import './bootstrap-grid.min.css';
 import React from 'react';
 import { initializeApp } from "firebase/app";
 import { Route, Routes } from 'react-router';
