@@ -5,13 +5,12 @@ export const Nav = styled.nav`
   justify-content: space-between;
   background-color: ${colors.hbrown};
   display: flex;
-  margin-top: 0;
   min-width: 100%;
   position: fixed;
   z-index: 999  ;
   align-items: center;
   padding: 2px 0px;
-  max-width: 100%;
+  width: 100%;
 `
 export const NavbarA = styled.a`
   margin: 0px;

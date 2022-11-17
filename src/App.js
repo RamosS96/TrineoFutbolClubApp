@@ -27,23 +27,23 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 function App() {
-  
+
 
   return (
-    <div>
-        <NavBar ref1={"/"} ref2={"#matches"} ref3={"/players"}/>
-        <Routes>
-          <Route path='/' element={<HomeContainer/>}/>
-          <Route path='/news' element={<NewsContainer/>}/>
-          <Route path='/news/:idParamNew' element={<NewsExpanded/>}/>
-          <Route path='/matches/:idParamMatch' element={<MatchesContainer/>}/>
-          <Route path='/players' element={<PlayersContainer/>}/>
-          <Route path='/players/:idParamPlayer' element={<PlayerStats/>}/>
-          <Route path='/matches' element={<MatchesList/>}/>
-        </Routes>
-               <Footer/>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<HomeContainer />} />
+        <Route path='/news' element={<NewsContainer />} />
+        <Route path='/news/:idParamNew' element={<NewsExpanded />} />
+        <Route path='/matches/:idParamMatch' element={<MatchesContainer />} />
+        <Route path='/players' element={<PlayersContainer />} />
+        <Route path='/players/:idParamPlayer' element={<PlayerStats />} />
+        <Route path='/matches' element={<MatchesList />} />
+      </Routes>
+      <Footer />
 
-    </div>
+    </>
   );
 }
 

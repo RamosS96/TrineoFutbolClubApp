@@ -20,8 +20,8 @@ function MatchesList() {
 
     return (
         <Container>
-            <Title2>TODOS LOS PARTIDOS</Title2>
             <Wrapper>
+            <Title2>TODOS LOS PARTIDOS</Title2>
             {match.map(d => <MatchBar key={d.date} link={d.date} props={`${d.rival} - ${d.GF} - ${d.GC}`}></MatchBar>)}            
             </Wrapper>
         </Container>
